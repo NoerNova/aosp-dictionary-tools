@@ -38,7 +38,7 @@ while (<>) {
     s/\{//g;                # remove { and }
     s/\}//g;
     s/&[^;]*;/ /g;          # remove URL encoded chars
-    s/\w/ /g;
+    s/\w/ /g;               # remove english words/alphabet
     s/\n\s*/\n/g;           # remove empty line
 
     # convert to lowercase letters and spaces, spell digits
