@@ -7,6 +7,7 @@
 # preserved.  Links are converted to normal text.  Digits are spelled out.
 
 # Written by Matt Mahoney, June 10, 2006.  This program is released to the public domain.
+# Modified by NoerNova, March 28, 2022. To used with Shan language version wiki.
 
 $/=">";                     # input record separator
 while (<>) {
@@ -38,7 +39,7 @@ while (<>) {
     s/\{//g;                # remove { and }
     s/\}//g;
     s/&[^;]*;/ /g;          # remove URL encoded chars
-    s/\w/ /g;               # remove english words/alphabet
+    s/\w/ /g;               # remove english, thai, other ascii supported words/characters
     s/\n\s*/\n/g;           # remove empty line
 
     # convert to lowercase letters and spaces, spell digits
